@@ -2,6 +2,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 
+:root {
+  --logo-color: #ed1c24;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -72,7 +76,7 @@ header {
 }
 
 .header-right a:hover {
-  color: red;
+  color: var(--logo-color);
 }
 
 .hero-section {
@@ -142,6 +146,22 @@ header {
   font-style: normal;
   right: 20px;
   bottom: 50px;
+}
+.tagline-2 {
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  position: absolute;
+  font-weight: 900;
+  font-style: normal;
+  left: 20px;
+  bottom: 20px;
+  opacity: 50%;
+}
+
+.tagline-2 span {
+  color: var(--logo-color);
+  opacity: 50%;
 }
 
 .design-by {
