@@ -34,11 +34,11 @@
 
             <p>Enter the Papa Zola GAME ON. Coming Soon.</p>
 
-            <button onclick="newTab()">Watch Trailer</button>
+            <button onclick="watchTrailer()">Watch Trailer</button>
           </div>
 
           <h1 class="tagline">GAME ON</h1>
-          <h1 class="tagline-2"><span>0</span> CLICKED</h1>
+          <h1 class="tagline-2"><span id="clickCounter">0</span> Clicked to Watch Trailer</h1>
 
           <p class="design-by">Design by Sahir Radzi #Syahmi</p>
           <p class="disclaimer">* Disclaimer: This illustration for my portfolio purpose</p>
@@ -48,9 +48,44 @@
     </div>
 
     <script>
-      function newTab() {
+      // Fungsi untuk menghitung klik dan membuka trailer
+      function watchTrailer() {
+        // Mengambil nilai counter dari localStorage (jika ada)
+        let clickCount = localStorage.getItem("trailerClickCount") || 0;
+
+        // Konversi ke integer dan tambah 1
+        clickCount = parseInt(clickCount) + 1;
+
+        // Simpan nilai baru ke localStorage
+        localStorage.setItem("trailerClickCount", clickCount);
+
+        // Perbarui tampilan di halaman
+        document.getElementById("clickCounter").textContent = clickCount;
+
+        // Membuka trailer di jendela baru
         window.open("https://www.youtube.com/watch?v=JDJDkld6f48", "_blank");
       }
+
+      // Fungsi untuk memuat nilai counter saat halaman dimuat
+      function loadClickCounter() {
+        // Ambil nilai dari localStorage
+        const savedCount = localStorage.getItem("trailerClickCount") || 0;
+
+        // Perbarui tampilan di halaman
+        document.getElementById("clickCounter").textContent = savedCount;
+      }
+
+      // Menjalankan kedua fungsi saat halaman dimuat
+      document.addEventListener("DOMContentLoaded", function () {
+        // Muat nilai counter yang tersimpan
+        loadClickCounter();
+
+        // Tambahkan event listener ke tombol
+        const trailerButton = document.querySelector("watchTrailer") || document.getElementById("watchTrailer");
+        if (trailerButton) {
+          trailerButton.addEventListener("click", watchTrailer);
+        }
+      });
     </script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="app.js"></script>
