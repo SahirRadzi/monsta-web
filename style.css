@@ -212,7 +212,7 @@ header {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.616);
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 428px) {
   header {
     padding: 0 10px;
   }
