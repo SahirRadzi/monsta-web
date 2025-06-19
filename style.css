@@ -211,3 +211,37 @@ header {
   opacity: 80%;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.616);
 }
+
+@media screen and (max-width: 650px) {
+  header {
+    padding: 0 10px;
+  }
+  .header-left button {
+    display: none;
+  }
+  .header-right a {
+    font-size: 12px;
+    padding: 0 5px;
+  }
+
+  .hero-info {
+    top: 30px;
+    left: 5%;
+  }
+
+  .hero-info .papa,
+  .hero-vid .tagline {
+    font-size: 50px;
+  }
+  .hero-vid .tagline-2 {
+    font-size: 24px;
+    bottom: 120px;
+  }
+  .hero-section h1 {
+    font-size: 90px;
+  }
+  .next-btn {
+    left: 25%;
+    top: 40%;
+  }
+}
