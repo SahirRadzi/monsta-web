@@ -232,6 +232,7 @@ header {
   .hero-info .papa,
   .hero-vid .tagline {
     font-size: 50px;
+    font-weight: bold;
   }
   .hero-vid .tagline-2 {
     font-size: 24px;
