@@ -229,11 +229,15 @@ header {
     left: 5%;
   }
 
-  .hero-info .papa,
-  .hero-vid .tagline {
-    font-size: 50px;
-    font-weight: bold;
+  .hero-info .papa {
+    font-size: 65px !important;
+    font-weight: bold !important;
   }
+  .tagline {
+    font-size: 65px !important;
+    font-weight: bold !important;
+  }
+
   .hero-vid .tagline-2 {
     font-size: 24px;
     bottom: 120px;
